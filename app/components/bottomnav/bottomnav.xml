@@ -1,0 +1,12 @@
+<!-- app/components/bottomnav/bottomnav.xml -->
+<DockLayout height="100%">
+<StackLayout dock="bottom" height="75" class="bottom-navigation" orientation="horizontal">
+	<Button  text="Home"/>
+	<Button text="Accounts"/>
+	<Button text="Programs"/>
+</StackLayout>
+<GridLayout class="page-content">
+        <Label class="page-icon fa" text="&#xf1ea;"></Label>
+        <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
+    </GridLayout>
+</DockLayout>
