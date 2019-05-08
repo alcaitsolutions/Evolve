@@ -1,8 +1,12 @@
 <Page
     class="page"
     navigatingTo="onNavigatingTo"  
-    xmlns="http://schemas.nativescript.org/tns.xsd">
-    <ActionBar class="action-bar">
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:bottomnav="nativescript-bottomnavigation" 
+    xmlns:VideoPlayer="../nativescript-videoplayer"
+    >
+
+    <ActionBar class="action-bar" >
         <!-- 
         Use the NavigationButton as a side-drawer button in Android
         because ActionItems are shown on the right side of the ActionBar
@@ -20,15 +24,20 @@
         </ActionItem>
         <Label class="action-bar-title" text="Programs"></Label>
     </ActionBar>
-<DockLayout height="100%">
-<StackLayout dock="bottom" height="75" class="bottom-navigation" orientation="horizontal">
-	<Button  text="Home"/>
-	<Button text="Accounts"/>
-	<Button text="Programs"/>
-</StackLayout>
-<GridLayout class="page-content">
-        <Label class="page-icon fa" text="&#xf1ea;"></Label>
-        <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
-    </GridLayout>
-</DockLayout>
+
+    <ScrollView>
+        <StackLayout class="home-panel ">
+
+            <VideoPlayer:Video id="nativeVideoPlayer" controls="true"
+                autoplay="true" height="300" src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+
+            <Label class="program-container" text=" Hypertension" />
+            <Label class="program-container programs" text=" Week 3" />
+            <Label class="program-container bolder"  text=" It All Starts In The Brain"
+                style="color: orange;" />
+            <Label text="ASR        RESOURCES        COMMUNITY" style="font-size: 14px;padding-left: 70px;" />
+            <Button class="plan-button" text="Plan Your Visit" tap="{{ onButtonTap }}" />
+        </StackLayout>
+    </ScrollView>
+
 </Page>

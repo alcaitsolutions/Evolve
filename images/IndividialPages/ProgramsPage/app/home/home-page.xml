@@ -1,0 +1,50 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:VideoPlayer="../nativescript-videoplayer">
+    <ActionBar title="Health Conscious - Hypertension" class="action-bar" />
+   
+        <StackLayout class="home-panel ">
+
+            <VideoPlayer:Video id="nativeVideoPlayer" controls="true"
+                autoplay="true" height="300" src="http://johndev.alcaintl.com/LESSON2.mp4" />
+
+            <Label class="program-container" text=" Hypertension" />
+            <Label class="program-container programs" text=" Week 3" />
+            <Label class="program-container bolder" text=" It All Starts In The Brain"
+                style="color: orange; margin-bottom: 30px;" />
+
+            <TabView id="tabViewContainer">
+                <TabViewItem class="tabViewTitle" title="Lesson Topics">
+
+                    <StackLayout>
+                        <Label text="List 3 bad habits and reflect on the breakdown"
+                            textWrap="true" class="m-15  text-left" color="blue" />
+                        <Label text="List solutions that you can implement to get around"
+                            textWrap="true" class="m-15  text-left" color="blue" />
+                        <Label text="First Tab" textWrap="true" class="m-15 h2 text-left"
+                            color="blue" />
+                        <Label text="What is the ideal version of yourself?"
+                            textWrap="true" class="m-15  text-left" color="blue" />
+                    </StackLayout>
+
+                </TabViewItem>
+                <TabViewItem class="tabViewTitle" title="New Actions">
+                    <StackLayout>
+                        <Label text="New actions go here" textWrap="true"
+                            class="m-15  text-left" color="blue" />
+                        <Label text="More new actions" textWrap="true" class="m-15  text-left"
+                            color="blue" />
+                    </StackLayout>
+                </TabViewItem>
+
+
+            </TabView>
+
+
+
+            <Button class="plan-button" text="ASR" tap="{{ onButtonTap }}" />
+
+        </StackLayout>
+    
+
+
+</Page>

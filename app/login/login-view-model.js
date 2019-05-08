@@ -1,12 +1,19 @@
-const observableModule = require("data/observable");
-const dialogsModule = require("ui/dialogs");
-const userService = require("~/shared/services/user-service");
-const topmost = require("ui/frame").topmost;
+const observableModule 	= require("data/observable");
+const dialogsModule 	= require("ui/dialogs");
+const userService 		= require("~/shared/services/user-service");
+const topmost 			= require("ui/frame").topmost;
+const appSettings 		= require("application-settings");
+const config = require("~/shared/config");
+const connectivityModule = require("tns-core-modules/connectivity");
+
 
 function LoginViewModel() {
+
+    
+ 
     const viewModel = observableModule.fromObject({
         processing: false,
-        email: "chitra@evolve.com",
+        email: "2",
         password: "12345",
         confirmPassword: "",
         isLoggingIn: true,
@@ -14,6 +21,12 @@ function LoginViewModel() {
             this.isLoggingIn = !this.isLoggingIn;
         },
         submit() {
+
+            if(config.debugMode){
+                topmost().navigate("./home/home-page");
+            }
+
+            
             this.processing = true;
             if (this.email.trim() === "" || this.password.trim() === "") {
                 alert("Please provide both an email address and password.");
@@ -27,12 +40,21 @@ function LoginViewModel() {
             }
         },
         login() {
+            // Trigger activity spinner
             this.processing = true;
+
+            // Call Login
             userService.login({
                 email: this.email,
                 password: this.password
-            }).then(() => {
-                this.processing = false;
+            }).then( (res) => {
+                // res coming in will be the resolved data from user service
+                // in this case, it will be the object itself, not array. You
+                // have to check for what is being returned and how.
+                console.log(`We are in view model and result username is: ${res.username}`);
+                alert("Thanks!");
+                config.displayName = res.username;
+
                 topmost().navigate("./home/home-page");
                 /*
                     If you don't want the user to come back to login page

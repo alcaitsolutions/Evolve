@@ -28,7 +28,7 @@
 
             <Button  text="{{ isLoggingIn ? 'Log In' : 'Sign Up' }}" tap="{{ submit }}"
                 class="btn btn-primary m-t-20" />
-               <ActivityIndicator rowSpan="3" busy="true"></ActivityIndicator>
+               
             <Label visibility="{{ isLoggingIn ? 'visible' : 'collapse' }}"
                 text="Forgot your password?" class="login-label" tap="{{ forgotPassword }}" />
         </StackLayout>

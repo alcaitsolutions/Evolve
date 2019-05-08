@@ -1,10 +1,9 @@
 <Page
     class="page"
-    navigatingTo="onNavigatingTo"  
-    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    navigatingTo="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd"
     xmlns:bottomnav="nativescript-bottomnavigation"
     >
-
     <ActionBar class="action-bar" >
         <!-- 
         Use the NavigationButton as a side-drawer button in Android
@@ -19,15 +18,15 @@
         <ActionItem icon="res://navigation/menu" 
             android:visibility="collapsed" 
             tap="onDrawerButtonTap"
-            ios.position="left">
-        </ActionItem>
-        <Label class="action-bar-title" text="Dashboard"></Label>
+            ios.position="left"></ActionItem>
+        <Label class="action-bar-title" text="Getting Started"></Label>
     </ActionBar>
+    <ScrollView>
+      
+        <StackLayout class="home-panel">
+            <!--Add your page content here-->
 
-    <GridLayout class="page-content">
-        <Label class="page-icon fa" text="&#xf015;"></Label>
-        <Label class="page-placeholder" text="<!-- BETTER HEALTH STUFF COMING -->"></Label>
-        
-    </GridLayout>
-
+            
+        </StackLayout>
+    </ScrollView>
 </Page>
