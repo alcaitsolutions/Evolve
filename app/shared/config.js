@@ -1,5 +1,6 @@
 var applicationSettingsModule = require("application-settings");
 
+let logAllErrors = true;
 
 // API KEYS Example
 
@@ -17,7 +18,8 @@ var configObject = {
 		this.token = "";
     },
     
-    debugMode: true
+    debugMode: true,
+    logAllErrors: true;
 };
 
 
