@@ -29,11 +29,7 @@ http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawe
                         <Label row="0" col="0" text="&#xf0e8;" class="fa" />
                         <Label row="0" col="1" text="Programs" class="p-r-10" />
                     </GridLayout>
-                  <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Slides' ? ' selected': '') }}"
-                        route="slides/slides-page" title="Slides" tap="onNavigationItemTap">
-                        <Label row="0" col="0" text="&#xf0e8;" class="fa" />
-                        <Label row="0" col="1" text="Slides" class="p-r-10" />
-                    </GridLayout>
+                 
 
                     <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Activity' ? ' selected': '') }}"
                         route="activity/activity-page" title="Activity Monitor" tap="onNavigationItemTap">
@@ -80,4 +76,3 @@ http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawe
         <Frame defaultPage="login/login-page"></Frame>
     </nsDrawer:RadSideDrawer.mainContent>
 </nsDrawer:RadSideDrawer>
-

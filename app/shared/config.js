@@ -19,7 +19,7 @@ var configObject = {
     },
     
     debugMode: true,
-    logAllErrors: true;
+    logAllErrors: true,
 };
 
 
