@@ -3,8 +3,8 @@
     <GridLayout rows="auto, auto, auto">
         <StackLayout class="form">
             <Image class="logo" src="~/images/johnevolve.png" />
-            <Label class="header" text="Evolve Your Health" />
-            <Label text="Login with Google" tap="{{ googleLogin }}"></Label>
+            <Label class="header" text="Health Conscious" />
+           
             <StackLayout class="input-field">
                 <Label text="Username" />
                 <TextField class="input" text="{{ email }}" hint="Email"
