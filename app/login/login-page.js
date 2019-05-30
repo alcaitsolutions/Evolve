@@ -35,7 +35,7 @@ function onGetStarted(){
     });
 
     //frameModule.topmost().navigate("./signup/signup-page");
-     frameModule.topmost().navigate("register/register");
+     frameModule.topmost().navigate("./register/register");
 }
 
 exports.onNavigatingTo = onNavigatingTo;
