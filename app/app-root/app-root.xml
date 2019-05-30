@@ -27,6 +27,8 @@ http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawe
                         <Label row="0" col="0" text="&#xf0e8;" class="fa" />
                         <Label row="0" col="1" text="Programs" class="p-r-10" />
                     </GridLayout>
+                 
+
                     <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Activity' ? ' selected': '') }}"
                         route="activity/activity-page" title="Activity Monitor" tap="onNavigationItemTap">
                         <Label row="0" col="0" text="&#xf14e;" class="fa" />
@@ -61,4 +63,8 @@ http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawe
     <nsDrawer:RadSideDrawer.mainContent>
         <Frame defaultPage="login/login-page"></Frame>
     </nsDrawer:RadSideDrawer.mainContent>
+<<<<<<< HEAD
 </nsDrawer:RadSideDrawer>
+=======
+</nsDrawer:RadSideDrawer>
+>>>>>>> master
