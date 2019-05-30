@@ -8,9 +8,9 @@ A cross-platform mobile health related application built on the NativeScript Fra
 
 For a detailed project report, visit: https://docs.google.com/spreadsheets/d/1Gd-0_aNLEVGg93EQsXzGptrROpKAwKBZMnsP4hsP7zs/edit#gid=0
 
-- Login
-- Forgot Password
-- Register
+- Customer On Boarding
+- Slides Pages 1 - 5 
+- Fluid Gestures
 
 ## Quick Start
 
