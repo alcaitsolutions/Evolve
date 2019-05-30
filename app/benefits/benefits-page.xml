@@ -1,0 +1,29 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar class = "action-bar">
+    <StackLayout orientation="horizontal"
+    ios:horizontalAlignment="center"
+    android:horizontalAlignment="left">
+    <Image src="images/tour-1.png" class="action-image"></Image>
+    <Label text="Testing Twice"  class="action-label"></Label>
+  </StackLayout>
+	</ActionBar>
+	<GridLayout rows="*" xmlns:lv="nativescript-ui-listview" xmlns:f="nativescript-fresco" height="100%">
+		<lv:RadListView id="list-view" row="0" items="{{ locations }}" marginRight="-2">
+			<lv:RadListView.listViewLayout>
+				<lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="180" spanCount="1" />
+			</lv:RadListView.listViewLayout>
+			<lv:RadListView.itemTemplate>
+				<GridLayout rows="*" backgroundColor="White">
+					<GridLayout rows="*" columns="*" margin="0">
+						<ios>
+							<Image src="{{ imageSrc }}" stretch="aspectFill" />
+						</ios>
+						<android>
+							<f:FrescoDrawee horizontalAlignment="stretch" height="180" imageUri="{{ imageSrc }}" />
+						</android>					
+					</GridLayout>
+				</GridLayout>
+			</lv:RadListView.itemTemplate>
+		</lv:RadListView>
+	</GridLayout>
+</Page>

@@ -22,13 +22,14 @@ function LoginViewModel() {
         },
         submit() {
 
-            if(config.debugMode){
-                topmost().navigate("./home/home-page");
+            if (config.debugMode) {
+                topmost().navigate("./benefits/benefits-page");
             }
 
             
             this.processing = true;
             if (this.email.trim() === "" || this.password.trim() === "") {
+                // eslint-disable-next-line no-alert
                 alert("Please provide both an email address and password.");
                 return;
             }
@@ -52,10 +53,11 @@ function LoginViewModel() {
                 // in this case, it will be the object itself, not array. You
                 // have to check for what is being returned and how.
                 console.log(`We are in view model and result username is: ${res.username}`);
+                // eslint-disable-next-line no-alert
                 alert("Thanks!");
                 config.displayName = res.username;
 
-                topmost().navigate("./home/home-page");
+                topmost().navigate("./benefits/benefits-page");
                 /*
                     If you don't want the user to come back to login page
                     then use clearHistory: true to clear the navigation stack
