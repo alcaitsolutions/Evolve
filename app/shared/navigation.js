@@ -1,5 +1,5 @@
 var config = require("./config");
-var frameModule = require("ui/frame");
+var frameModule = require("tns-core-modules/ui/frame");
 
 module.exports = {
 	goToLoginPage: function() {

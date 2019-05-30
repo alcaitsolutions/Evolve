@@ -1,4 +1,4 @@
-var applicationSettingsModule = require("application-settings");
+var applicationSettingsModule = require("tns-core-modules/application-settings");
 
 let logAllErrors = true;
 
