@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.BetterHealth",
+    "id": "org.nativescript.HealthConscious",
     "tns-android": {
       "version": "5.1.0"
     }

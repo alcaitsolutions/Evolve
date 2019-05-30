@@ -26,7 +26,7 @@ function onSubmit(){
         console.log("Auth code here");
     });
 
-    //frameModule.topmost().navigate("./onBoard/slideOne/slideOne-page");
+    frameModule.topmost().navigate("./benefits/benefits-page");
 }
 
 function onGetStarted(){
@@ -35,7 +35,7 @@ function onGetStarted(){
     });
 
     //frameModule.topmost().navigate("./signup/signup-page");
-    // frameModule.topmost().navigate("register/register");
+     frameModule.topmost().navigate("register/register");
 }
 
 exports.onNavigatingTo = onNavigatingTo;
