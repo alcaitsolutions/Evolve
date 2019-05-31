@@ -36,6 +36,11 @@ function inspired(){
     showDebugMessage();
 }
 
+function action(){
+    console.log("action");
+    showDebugMessage();
+}
+
 function showDebugMessage(){
     alert("In development");
 }
@@ -46,5 +51,6 @@ exports.peers = peers;
 exports.awareness = awareness;
 exports.feedback = feedback;
 exports.inspired = inspired;
+exports.action = action;
 
 exports.showDebugMessage = showDebugMessage;

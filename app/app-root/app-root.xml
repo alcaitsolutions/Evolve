@@ -11,51 +11,91 @@ http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawe
         <nsDrawer:SlideInOnTopTransition/>
     </nsDrawer:RadSideDrawer.drawerTransition>
     <nsDrawer:RadSideDrawer.drawerContent>
-        <GridLayout rows="auto, *" class="sidedrawer sidedrawer-left">
-            <StackLayout class="sidedrawer-header">
+        <GridLayout rows="auto, *" class="sidedrawer sidedrawer-left evolve-menu-background">
+            <StackLayout class="sidedrawer-header ">
                 <Label class="sidedrawer-header-image fa" text="&#xf2bd;" />
                 <Label class="sidedrawer-header-brand" text="Chitra" />
                 <Label class="footnote" text="chitra@mail.com" />
             </StackLayout>
             <ScrollView row="1">
                 <StackLayout class="sidedrawer-content">
+
+                    <!-- Home BUtton -->
                     <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Home' ? ' selected': '') }}"
                         route="home/home-page" title="Home" tap="onNavigationItemTap">
                         <Label row="0" col="0" text="&#xf015;" class="fa" />
                         <Label row="0" col="1" text="Home" class="p-r-10" />
                     </GridLayout>
-                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Program' ? ' selected': '') }}"
-                        route="program/program-page" title="Programs" tap="onNavigationItemTap">
-                        <Label row="0" col="0" text="&#xf0e8;" class="fa" />
-                        <Label row="0" col="1" text="Programs" class="p-r-10" />
-                    </GridLayout>
-                 
 
-                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Activity' ? ' selected': '') }}"
-                        route="activity/activity-page" title="Activity Monitor" tap="onNavigationItemTap">
-                        <Label row="0" col="0" text="&#xf14e;" class="fa" />
-                        <Label row="0" col="1" text="Activity Monitor" class="p-r-10" />
-                    </GridLayout>
+                    <!-- Account BUtton -->
                     <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Account' ? ' selected': '') }}"
                         route="account/account-page" title="Account" tap="onNavigationItemTap">
-                        <Label row="0" col="0" text="&#xf007;" class="fa" />
+                        <Label row="0" col="0" text="&#xf0f0;;" class="fa" />
                         <Label row="0" col="1" text="Account" class="p-r-10" />
                     </GridLayout>
-                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'FAQ' ? ' selected': '') }}"
-                        route="faq/faq-page" title="FAQ's" tap="onNavigationItemTap">
-                        <Label row="0" col="0" text="&#xf005;" class="fa" />
-                        <Label row="0" col="1" text="FAQ" class="p-r-10" />
-                    </GridLayout>
-                    <StackLayout class="hr-light"></StackLayout>
+                 
+                    <!-- Settings BUtton -->
                     <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Settings' ? ' selected': '') }}"
                         route="settings/settings-page" title="Settings" tap="onNavigationItemTap">
                         <Label row="0" col="0" text="&#xf013;" class="fa" />
                         <Label row="0" col="1" text="Settings" class="p-r-10" />
                     </GridLayout>
+
+                    <!-- Activity Monitor -->
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Activity' ? ' selected': '') }}"
+                        route="activity/activity-page" title="Activity" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf080;" class="fa" />
+                        <Label row="0" col="1" text="Activity Monitor" class="p-r-10" />
+                    </GridLayout>
+
+                    <!-- Programs -->
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Programs' ? ' selected': '') }}"
+                        route="programs/programs-page" title="programs" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf02d;" class="fa" />
+                        <Label row="0" col="1" text="Programs" class="p-r-10" />
+                    </GridLayout>
+
+                    <StackLayout class="hr-light"></StackLayout>
+                    <!-- Messages Button -->
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Messages' ? ' selected': '') }}"
+                        route="messages/messages-page" title="Messages" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf0e0;" class="fa" />
+                        <Label row="0" col="1" text="Messages" class="p-r-10" />
+                    </GridLayout>
+
+
                     <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Settings' ? ' selected': '') }}"
                         route="settings/settings-page" title="Community" tap="onNavigationItemTap">
-                        <Label row="0" col="0" text="&#xf013;" class="fa" />
+                        <Label row="0" col="0" text="&#xf0c0;" class="fa" />
                         <Label row="0" col="1" text="Community" class="p-r-10" />
+                    </GridLayout>
+
+                    <!-- Journal -->
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Journal' ? ' selected': '') }}"
+                        route="journal/journal-page" title="journal" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf02d;" class="fa" />
+                        <Label row="0" col="1" text="Journal" class="p-r-10" />
+                    </GridLayout>
+
+                     <!-- Favorites -->
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Favorites' ? ' selected': '') }}"
+                        route="favorites/favorites-page" title="favorites" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf005;" class="fa" />
+                        <Label row="0" col="1" text="Favorites" class="p-r-10" />
+                    </GridLayout>
+
+                    <!-- Support Center -->
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Support' ? ' selected': '') }}"
+                        route="support/support-page" title="support" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf1cd;" class="fa" />
+                        <Label row="0" col="1" text="Support" class="p-r-10" />
+                    </GridLayout>
+
+
+                           <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Settings' ? ' selected': '') }}"
+                        route="developer/developer-page" title="Developer" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf013;" class="fa" />
+                        <Label row="0" col="1" text="Developer Testing" class="p-r-10" />
                     </GridLayout>
                 </StackLayout>
             </ScrollView>

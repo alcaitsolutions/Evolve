@@ -2,7 +2,7 @@
     xmlns="http://schemas.nativescript.org/tns.xsd"
     xmlns:ns="nativescript-carousel"
     navigatingTo="onNavigatingTo">
-    <ActionBar class="action-bar" >
+    <ActionBar class="action-bar customActionBar" >
         <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
         <ActionItem icon="res://navigation/menu" 
             android:visibility="collapsed" 
@@ -37,6 +37,11 @@
                 stretch="aspectFit" 
                 class="img-rounded p-l-10 p-r-10 p-t-15"
                 tap="peers"></Image>
+
+                   <Image src="~/images/features/action.png" 
+                stretch="aspectFit" 
+                class="img-rounded p-l-10 p-r-10 p-t-15"
+                tap="action"></Image>
 
     </StackLayout>
     </ScrollView>

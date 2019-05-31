@@ -1,0 +1,48 @@
+<Page
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:ns="nativescript-carousel"
+    navigatingTo="onNavigatingTo">
+    <ActionBar class="action-bar customActionBar" >
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left"></ActionItem>
+        <Label class="action-bar-title" text="Choose Course"></Label>
+    </ActionBar>
+    <ScrollView>
+    <StackLayout class="">
+        
+        <Label text="Choose Your Course"></Label>
+        <Image src="~/images/chooseYourCourse/diabetes.png" 
+        stretch="aspectFit" 
+        class="img-rounded p-l-10 p-r-10 p-t-15"
+        tap="diabetes"></Image>
+
+           <Image src="~/images/chooseYourCourse/generalHealth.png" 
+            stretch="aspectFit" 
+            class="img-rounded p-l-10 p-r-10 p-t-15"
+            tap="generalHealth"></Image>
+
+        
+           <Image src="~/images/chooseYourCourse/hypertention.png" 
+            stretch="aspectFit" 
+            class="img-rounded p-l-10 p-r-10 p-t-15"
+            tap="hyper"></Image>
+
+
+                <Label class="p-l-10 p-r-10 p-t-15" textWrap="true" text="In each 24-week lifestyle conditioning program, you will learn and implement practical behaviors studied to improve health. By the end of the course, your daily habits will have changed significantly, and you will feel this difference with a healthier mind and body. 
+
+Our programs adhere to the most current medical research; we do not use fad diets, unproven tools, or supplements.
+
+Each course is designed to be taken in 6 months (one module per week), but it is available to you as long as you need for completion. At the end of the course, you will automatically be enrolled into the Maintenance Plan. 
+
+You can cancel your plan at any time."></Label>
+
+<Button text="Choose" tap="submit" class=" btn-primary m-t-10" />
+
+
+    </StackLayout>
+
+    </ScrollView>
+</Page>

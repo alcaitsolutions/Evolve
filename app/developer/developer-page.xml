@@ -19,14 +19,16 @@
             android:visibility="collapsed" 
             tap="onDrawerButtonTap"
             ios.position="left"></ActionItem>
-        <Label class="action-bar-title" text="Getting Started"></Label>
+        <Label class="action-bar-title" text="Developer Options"></Label>
     </ActionBar>
     <ScrollView>
       
         <StackLayout class="home-panel">
             <!--Add your page content here-->
 
-            
+        <Button text="Customer Onboarding Figma #2" tap="test1" class="btn btn-primary btn-active" />
+          <Button text="Benefits of Signing Up - FIGMA #4" tap="test2" class="btn btn-primary btn-active" />
+            <Button text="Choose Your Program - FIGMA #2A" tap="test3" class="btn btn-primary btn-active" />
         </StackLayout>
     </ScrollView>
 </Page>
