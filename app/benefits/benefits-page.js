@@ -1,17 +1,20 @@
+const app = require("tns-core-modules/application");
 
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
-const Observable = require("tns-core-modules/data/observable").Observable;
-const fromObject = require("tns-core-modules/data/observable").fromObject;
-const benefitsViewModel = require("./benefits-view-model");
+const BenefitsViewModel = require("./benefits-view-model");
+
+// Load config file which handles our session data
+var config = require("../shared/config");
 
 function onNavigatingTo(args) {
-
-
-    var page = args.object;
-        
-        page.bindingContext = new benefitsViewModel();
-
+    const page = args.object;
+    console.log("COming from SESSION: " + config.displayName);
+    page.bindingContext = new BenefitsViewModel();
 }
 
+function onDrawerButtonTap(args) {
+    const sideDrawer = app.getRootView();
+    sideDrawer.showDrawer();
+}
 
 exports.onNavigatingTo = onNavigatingTo;
+exports.onDrawerButtonTap = onDrawerButtonTap;

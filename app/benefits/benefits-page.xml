@@ -4,25 +4,43 @@ xmlns:ns="nativescript-carousel">
  
 
   
-    <Page.actionBar>
-        <ActionBar title="My App" icon="" class="action-bar">
-        </ActionBar>
-    </Page.actionBar>
+    <ActionBar class="action-bar" >
+        <!-- 
+        Use the NavigationButton as a side-drawer button in Android
+        because ActionItems are shown on the right side of the ActionBar
+        -->
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <!-- 
+        Use the ActionItem for IOS with position set to left. Using the
+        NavigationButton as a side-drawer button in iOS is not possible,
+        because its function is to always navigate back in the application.
+        -->
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left"></ActionItem>
+        <Label class="action-bar-title" text="Getting Started"></Label>
+    </ActionBar>
+
+ 
   
-    <StackLayout class="p-20">
+    <StackLayout class="">
       <ns:Carousel height="100%" width="100%" pageChanged="myChangeEvent" pageTapped="mySelectedEvent" indicatorColor="#fff000" finite="true" bounce="false" showIndicator="true" verticalAlignment="top" android:indicatorAnimation="swap" color="white">
-    <ns:CarouselItem id="slide1" backgroundColor="#b3cde0" verticalAlignment="middle">
-        <Label text="Slide 1" backgroundColor="#50000000" horizontalAlignment="center"/>
+    <ns:CarouselItem class="slides slides-1" id="slide1" backgroundColor="#b3cde0" verticalAlignment="middle">
+        <Label  backgroundRepeat="no-repeat" text="Step 1" backgroundColor="#50000000" horizontalAlignment="center"/>
+        <!-- Dock Bottom -->
     </ns:CarouselItem>
-    <ns:CarouselItem id="slide2" backgroundColor="#6497b1" verticalAlignment="middle">
+    <ns:CarouselItem class="slides slides-2" id="slide2" backgroundColor="#6497b1" verticalAlignment="middle">
         <Label text="Slide 2" backgroundColor="#50000000" horizontalAlignment="center"/>
     </ns:CarouselItem>
-    <ns:CarouselItem id="slide3" backgroundColor="#005b96" verticalAlignment="middle">
+    <ns:CarouselItem class="slides slides-3" id="slide3" backgroundColor="#005b96" verticalAlignment="middle">
         <Label text="Slide 3" backgroundColor="#50000000" horizontalAlignment="center"/>
     </ns:CarouselItem>
-    <ns:CarouselItem id="slide4" backgroundColor="#03396c" verticalAlignment="middle">
+    <ns:CarouselItem class="slides slides-4" id="slide4" backgroundColor="#03396c" verticalAlignment="middle">
         <Label text="Slide 4" backgroundColor="#50000000" horizontalAlignment="center"/>
     </ns:CarouselItem>
 </ns:Carousel>
     </StackLayout>
+
+ 
 </Page>
