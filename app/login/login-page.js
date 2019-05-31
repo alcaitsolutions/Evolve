@@ -35,11 +35,16 @@ function onGetStarted(){
     });
 
     //frameModule.topmost().navigate("./signup/signup-page");
-     frameModule.topmost().navigate("./register/register");
+     //frameModule.topmost().navigate("./register/register");
+}
+
+function onSignupBenefits(){
+    frameModule.topmost().navigate("./features/features-page");
 }
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.onForgotPassword = onForgotPassword;
 exports.onSubmit = onSubmit;
 exports.onGetStarted = onGetStarted;
+exports.onSignupBenefits = onSignupBenefits;
 

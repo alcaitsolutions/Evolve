@@ -1,5 +1,5 @@
 <Page loaded="pageLoaded" class="bgLogo" actionBarHidden="true" xmlns="http://www.nativescript.org/tns.xsd">
-
+<ScrollView>
  <StackLayout verticalAlignment="center" class="form">
 	<StackLayout  class="input-field ">
 				<TextField class="form-control" text="{{ email }}" hint="Email" keyboardType="email" autocorrect="false" autocapitalizationType="none"
@@ -14,9 +14,10 @@
 			
 				<Button text="Log In" tap="submit" class=" btn-primary m-t-10" tap="onSubmit"/>
 				<Label text="Don't have an account? Get Started!" tap="onGetStarted"></Label>
+				<Label text="Test Signup Benefits" tap="onSignupBenefits"></Label>
 			</StackLayout>
  </StackLayout>
  
- 
+ </ScrollView>
 	
 </Page>

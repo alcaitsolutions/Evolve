@@ -1,0 +1,43 @@
+<Page
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:ns="nativescript-carousel"
+    navigatingTo="onNavigatingTo">
+    <ActionBar class="action-bar" >
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left"></ActionItem>
+        <Label class="action-bar-title" text="Benefits Of Signing Up"></Label>
+    </ActionBar>
+    <ScrollView>
+    <StackLayout class="">
+         <Image src="~/images/features/logo.png" 
+    stretch="aspectFit"></Image>
+
+        
+        <Image src="~/images/features/awareness.png" 
+        stretch="aspectFit" 
+        class="img-rounded p-l-10 p-r-10 p-t-15"
+        tap="awareness"></Image>
+
+           <Image src="~/images/features/feedback.png" 
+            stretch="aspectFit" 
+            class="img-rounded p-l-10 p-r-10 p-t-15"
+            tap="feedback"></Image>
+
+        
+           <Image src="~/images/features/inspired.png" 
+            stretch="aspectFit" 
+            class="img-rounded p-l-10 p-r-10 p-t-15"
+            tap="inspired"></Image>
+
+        
+           <Image src="~/images/features/peers.png" 
+                stretch="aspectFit" 
+                class="img-rounded p-l-10 p-r-10 p-t-15"
+                tap="peers"></Image>
+
+    </StackLayout>
+    </ScrollView>
+</Page>
