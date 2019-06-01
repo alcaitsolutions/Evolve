@@ -22,19 +22,16 @@ function onNavigatingTo (args) {
 } 
 
 function onSubmit(){
-    alert("Authenticating. Next screen is customer onboarding slide.").then(() => {
+   /* alert("Authenticating. Next screen is customer onboarding slide.").then(() => {
         console.log("Auth code here");
     });
-
-    frameModule.topmost().navigate("./benefits/benefits-page");
+*/
+    frameModule.topmost().navigate("./signup/signup-page");
 }
 
 function onGetStarted(){
-     alert("You would now be directed to REGISTER PAGE, which I am working on NOW.").then(() => {
-        console.log("Auth code here");
-    });
 
-    //frameModule.topmost().navigate("./signup/signup-page");
+    frameModule.topmost().navigate("./signup/signup-page");
      //frameModule.topmost().navigate("./register/register");
 }
 

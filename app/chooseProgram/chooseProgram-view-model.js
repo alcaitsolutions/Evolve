@@ -3,7 +3,7 @@ const SelectedPageService = require("../shared/selected-page-service");
 const config = require("../shared/config");
 //const SelectedPageService = require("../shared/selected-page-service");
 
-function FeaturesViewModel() {
+function ChooseProgramViewModel() {
     //SelectedPageService.getInstance().updateSelectedPage("Benefits");
 
     const viewModel = observableModule.fromObject({
@@ -14,4 +14,4 @@ function FeaturesViewModel() {
     return viewModel;
 }
 
-module.exports = FeaturesViewModel;
+module.exports =  ChooseProgramViewModel;

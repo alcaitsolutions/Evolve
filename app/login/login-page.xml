@@ -13,8 +13,8 @@
 				<Label horizontalAlignment="right" text="Forgot Password?" tap="onForgotPassword"></Label>
 			
 				<Button text="Log In" tap="submit" class=" btn-primary m-t-10" tap="onSubmit"/>
-				<Label text="Don't have an account? Get Started!" tap="onGetStarted"></Label>
-				<Label text="Test Signup Benefits" tap="onSignupBenefits"></Label>
+				<Label text="Signup here, Get Started!" tap="onGetStarted"></Label>
+				
 			</StackLayout>
  </StackLayout>
  

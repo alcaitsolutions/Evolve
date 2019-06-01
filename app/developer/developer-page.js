@@ -2,7 +2,7 @@ const app = require("tns-core-modules/application");
 const frameModule = require("tns-core-modules/ui/frame");
 const DeveloperViewModel = require("./developer-view-model");
 const topmost 			= require("tns-core-modules/ui/frame").topmost;
-
+const Button = require("tns-core-modules/ui/button").Button;
 // Load config file which handles our session data
 var config = require("../shared/config");
 
@@ -28,6 +28,11 @@ function test2(){
 function test3(){
     frameModule.topmost().navigate("./chooseProgram/chooseProgram-page");
 }
+
+function test4(){
+    frameModule.topmost().navigate("./chooseProgram/chooseProgram-page");
+}
+
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;

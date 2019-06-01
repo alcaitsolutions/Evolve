@@ -29,6 +29,7 @@
         <Button text="Customer Onboarding Figma #2" tap="test1" class="btn btn-primary btn-active" />
           <Button text="Benefits of Signing Up - FIGMA #4" tap="test2" class="btn btn-primary btn-active" />
             <Button text="Choose Your Program - FIGMA #2A" tap="test3" class="btn btn-primary btn-active" />
+             <Button text="Signup - FIGMA #Final C" tap="test4" class="btn btn-primary btn-active" />
         </StackLayout>
     </ScrollView>
 </Page>

@@ -1,4 +1,5 @@
 const SignupViewModel = require("./signup-view-model");
+const app = require("tns-core-modules/application");
 
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -23,6 +24,12 @@ function onSignupButtonTap(args) {
     bindingContext.signUp();
 }
 
+function onDrawerButtonTap(args) {
+    const sideDrawer = app.getRootView();
+    sideDrawer.showDrawer();
+}
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.onSignupWithSocialProviderButtonTap = onSignupWithSocialProviderButtonTap;
 exports.onSignupButtonTap = onSignupButtonTap;
+exports.onDrawerButtonTap = onDrawerButtonTap;
