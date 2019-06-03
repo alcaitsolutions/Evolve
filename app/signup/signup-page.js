@@ -1,35 +1,36 @@
 const SignupViewModel = require("./signup-view-model");
 const app = require("tns-core-modules/application");
 
+
+var _page;
+
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
 function onNavigatingTo(args) {
     const page = args.object;
+    _page = args.object;
     page.bindingContext = new SignupViewModel();
 }
 
-function onSignupWithSocialProviderButtonTap() {
-    /* ***********************************************************
-    * For sign up with social provider you can add your custom logic or
-    * use NativeScript plugin for sign up with Facebook
-    * http://market.nativescript.org/plugins/nativescript-facebook
-    *************************************************************/
+
+function hideUserName(){
+    let usr =  _page.getViewById("fName");
+
 }
 
-function onSignupButtonTap(args) {
-    const button = args.object;
-    const bindingContext = button.bindingContext;
-
-    bindingContext.signUp();
-}
 
 function onDrawerButtonTap(args) {
     const sideDrawer = app.getRootView();
     sideDrawer.showDrawer();
 }
 
+function onSignupButtonTap(){
+    // Go to page 2 signup 
+
+}
+
+exports.hideUserName = hideUserName;
 exports.onNavigatingTo = onNavigatingTo;
-exports.onSignupWithSocialProviderButtonTap = onSignupWithSocialProviderButtonTap;
 exports.onSignupButtonTap = onSignupButtonTap;
 exports.onDrawerButtonTap = onDrawerButtonTap;

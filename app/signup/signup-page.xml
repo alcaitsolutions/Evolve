@@ -1,41 +1,44 @@
-<Page navigatingTo="onNavigatingTo" class="page" xmlns="http://schemas.nativescript.org/tns.xsd">
- <ActionBar class="action-bar customActionBar" >
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+    <ActionBar class="action-bar customActionBar" >
+        <!-- 
+        Use the NavigationButton as a side-drawer button in Android
+        because ActionItems are shown on the right side of the ActionBar
+        -->
         <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <!-- 
+        Use the ActionItem for IOS with position set to left. Using the
+        NavigationButton as a side-drawer button in iOS is not possible,
+        because its function is to always navigate back in the application.
+        -->
         <ActionItem icon="res://navigation/menu" 
             android:visibility="collapsed" 
             tap="onDrawerButtonTap"
-            ios.position="left"></ActionItem>
+            ios.position="left">
+        </ActionItem>
         <Label class="action-bar-title" text="Signup"></Label>
     </ActionBar>
-
-  
    
-       
-  
-    <StackLayout >
-         <Image src="~/images/signup/step1.png" 
-                stretch="aspectFit" 
-                class="evolve-steps p-t-20 p-l-10 p-r-10 "
-                tap="action"></Image>
+    <DockLayout width="100%" height="100%" backgroundColor="lightgray" class="page-gradient"
+        stretchLastChild="false">
 
-                 <Label  horizontalAlignment="center" text="Choose Your Course" class="headerText"></Label>
+   
 
-    <ScrollView >
-        <StackLayout >
-
-        <Image src="~/images/signup/price.png" 
-                stretch="aspectFit" 
-                class="evolve-steps p-t-20 p-l-10 p-r-10 "
-                tap="action"></Image>
-
-            <Button class="btn btn-outline" tap="onSignupWithSocialProviderButtonTap()" text="Sign up with Social Provider"></Button>
-
-           
-       
+        <Button class="btn-primary h2" text="Next" height="80" dock="bottom"
+            tap="{{ onSignupButtonTap }}" />
+        <!-- content -->
+        <StackLayout dock="top" width="100%" height="75" backgroundColor="yellow">
+            <!-- >
+            <Label horizontalAlignment="center" text="Graphic - Step 1 thru 3 Here" /> 
+            --> 
+            <Image class="" src="~/images/signup/step-1-on.png" stretch="fill" />
+            
         </StackLayout>
-    </ScrollView>
-    </StackLayout>
-
-  
-
+        <StackLayout  verticalAlignment="center">
+            <TextField  id="fName" width="80%"  text="{{ textFieldValue }}" hint="First Name" />
+            <TextField id="email" text="{{ textFieldValue }}" hint="Email" />
+            <TextField id="password1" text="{{ textFieldValue }}" hint="Password" />
+            <TextField id="password2" text="{{ textFieldValue }}" hint="Confirm Password" />
+        </StackLayout>
+        <!-- end content -->
+    </DockLayout>
 </Page>

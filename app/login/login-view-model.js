@@ -5,7 +5,7 @@ const topmost 			= require("tns-core-modules/ui/frame").topmost;
 const appSettings 		= require("application-settings");
 const config = require("~/shared/config");
 const connectivityModule = require("tns-core-modules/connectivity");
-
+const  TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
 
 function LoginViewModel() {
 
