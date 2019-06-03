@@ -23,21 +23,21 @@
 
    
 
-        <Button class="btn-primary h2" text="Next" height="80" dock="bottom"
-            tap="{{ onSignupButtonTap }}" />
+        <Button class="submitButton h2 border" text="Next" height="60" dock="bottom"
+            tap="{{ onSignupButtonTap }}" returnKeyType="next"/>
         <!-- content -->
-        <StackLayout dock="top" width="100%" height="75" backgroundColor="yellow">
+        <StackLayout dock="top" width="100%" height="75" >
             <!-- >
             <Label horizontalAlignment="center" text="Graphic - Step 1 thru 3 Here" /> 
             --> 
             <Image class="" src="~/images/signup/step-1-on.png" stretch="fill" />
-            
+            <Image style="margin-top: 15"  src="~/images/signup/progress.png" stretch="fill" />
         </StackLayout>
-        <StackLayout  verticalAlignment="center">
-            <TextField  id="fName" width="80%"  text="{{ textFieldValue }}" hint="First Name" />
-            <TextField id="email" text="{{ textFieldValue }}" hint="Email" />
-            <TextField id="password1" text="{{ textFieldValue }}" hint="Password" />
-            <TextField id="password2" text="{{ textFieldValue }}" hint="Confirm Password" />
+        <StackLayout  verticalAlignment="center" horizontalAlignment="center" >
+            <TextField  id="fName" width="80%"  text="{{ textFieldValue }}" hint="Name" class="textFields"/>
+            <TextField id="email" text="{{ textFieldValue }}" hint="Email" class="textFields"/>
+            <TextField id="password1" text="{{ textFieldValue }}" hint="Password" class="textFields"/>
+            <TextField id="password2" text="{{ textFieldValue }}" hint="Confirm Password" class="textFields"/>
         </StackLayout>
         <!-- end content -->
     </DockLayout>

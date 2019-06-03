@@ -8,8 +8,8 @@ function SignupViewModel() {
         confirmPassword: "",
 
         signUp: function () {
-            const fName = this.fName;
-
+            const fName = this.fName,
+            alert("Validating Email!")
             /* ***********************************************************
             * Call your custom signup logic using the email and password data.
             *************************************************************/
