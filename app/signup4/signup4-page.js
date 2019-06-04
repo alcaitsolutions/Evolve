@@ -1,4 +1,4 @@
-const SignupViewModel = require("./signup-view-model");
+const SignupViewModel = require("./signup4-view-model");
 const app = require("tns-core-modules/application");
 const frameModule = require("tns-core-modules/ui/frame");
 var dialogs = require("tns-core-modules/ui/dialogs");
@@ -30,7 +30,7 @@ function onSignupButtonTap(args){
         moduleName: "./signup2/signup2-page",
         animated: true,
         transition: {
-          name: "slideLeft",
+          name: "slideTop",
           duration: 380,
           curve: "easeIn"
         }

@@ -15,7 +15,7 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <Label class="action-bar-title" text="Signup"></Label>
+        <Label class="action-bar-title" text="Signup - Step 2"></Label>
     </ActionBar>
    
     <DockLayout width="100%" height="100%" backgroundColor="lightgray" class="page-gradient"
@@ -24,7 +24,7 @@
    
 
         <Button class="submitButton h2 border" text="Next" height="60" dock="bottom"
-            tap="onSignupButtonTap" returnKeyType="next"/>
+            tap="{{ onSignupButtonTap }}" returnKeyType="next"/>
         <!-- content -->
         <StackLayout dock="top" width="100%" height="75" >
             <!-- >

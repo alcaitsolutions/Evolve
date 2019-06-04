@@ -1,22 +1,18 @@
-<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
-    <DockLayout width="100%" height="100%" class="page-gradient" backgroundColor="lightgray"
-        stretchLastChild="false">
+<Page loaded="loaded">
+	<Page.actionBar>
+		<ActionBar title="Sign up"></ActionBar>
+	</Page.actionBar>
+	<ScrollView>
+		<StackLayout>
+			
+			<GridLayout rows="auto, auto, auto">
+				<TextField text="{{ displayname }}" id="displayname" hint="User Name" keyboardType="displayname" returnKeyType="next" returnPress="focusEmail" autocorrect="false" autocapitalizationType="none" row="0" />
+				<TextField text="{{ email }}" id="email" hint="Email Address" keyboardType="email" returnKeyType="next" returnPress="focusPassword" autocorrect="false" autocapitalizationType="none" row="1" />
+				<TextField text="{{ password }}" id="password" secure="true" hint="Password" returnKeyType="done" returnPress="register" row="2" />
+				<ActivityIndicator busy="{{ authenticating }}" rowSpan="2" />
+			</GridLayout>
 
-
-        <Button class="btn-primary" text="CONTINUE" height="80" dock="bottom"
-            tap="{{ onButtonTap }}" />
-        <!-- content -->
-        <StackLayout dock="top" width="100%" height="75" backgroundColor="yellow">
-
-            <Label horizontalAlignment="center" text="Graphic - Step 1 thru 3 Here" />
-
-        </StackLayout>
-        <StackLayout verticalAlignment="center">
-            <TextField  width="80%"  text="{{ textFieldValue }}" hint="First Name" />
-            <TextField text="{{ textFieldValue }}" hint="Last Name" />
-            <TextField text="{{ textFieldValue }}" hint="Email" />
-            <TextField text="{{ textFieldValue }}" hint="Password" />
-        </StackLayout>
-        <!-- end content -->
-    </DockLayout>
+			<Button text="Sign Up" id="signUpButton" tap="register" class="button"/>
+		</StackLayout>
+	</ScrollView>
 </Page>

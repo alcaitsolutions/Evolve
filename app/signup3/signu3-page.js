@@ -1,10 +1,10 @@
-const SignupViewModel = require("./signup-view-model");
+const Signup3ViewModel = require("./signup3-view-model");
 const app = require("tns-core-modules/application");
 const frameModule = require("tns-core-modules/ui/frame");
 var dialogs = require("tns-core-modules/ui/dialogs");
 const topmost = require("tns-core-modules/ui/frame").topmost;
 
-const signupViewModel = new SignupViewModel;
+const signup3ViewModel = new SignupViewModel;
 var pageArgs;
 
 /* ***********************************************************
@@ -13,7 +13,7 @@ var pageArgs;
 function onNavigatingTo(args) {
     const page = args.object;
     pageArgs = page;
-    page.bindingContext = signupViewModel;
+    page.bindingContext = signup3ViewModel;
 }
 
 
@@ -27,7 +27,7 @@ function onSignupButtonTap(args){
     //frameModule.topmost().navigate("./signup2/signup2-page");
      //frameModule.topmost().navigate("./signup/signup-page");
      args.object.page.frame.navigate({
-        moduleName: "./signup2/signup2-page",
+        moduleName: "./signup4/signup4-page",
         animated: true,
         transition: {
           name: "slideLeft",

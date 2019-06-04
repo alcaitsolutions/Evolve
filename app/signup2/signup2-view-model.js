@@ -1,8 +1,8 @@
 const observableModule = require("tns-core-modules/data/observable");
 var config = require("../shared/config");
-const SelectedPageService = require("../shared/selected-page-service");
+//const SelectedPageService = require("../shared/selected-page-service");
 
-function SignupViewModel() {
+function Signup2ViewModel() {
     //SelectedPageService.getInstance().updateSelectedPage("Signup");
 
     const viewModel = observableModule.fromObject({
@@ -13,4 +13,4 @@ function SignupViewModel() {
     return viewModel;
 }
 
-module.exports = SignupViewModel;
+module.exports = Signup2ViewModel;
