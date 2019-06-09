@@ -1,26 +1,52 @@
-var applicationSettingsModule = require("tns-core-modules/application-settings");
-
-let logAllErrors = true;
-
-// API KEYS Example
-
-module.exports = {
-    apiUrl: "https://jsonplaceholder.typicode.com/",
-    appKey: "kid_HyHoT_REf",
-    appUserHeader: "Basic a2lkX0h5SG9UX1JFZjo1MTkxMDJlZWFhMzQ0MzMyODFjN2MyODM3MGQ5OTIzMQ"
-};
+var applicationSettingsModule = require("application-settings");
 
 var configObject = {
-	
-    api: "https://api.alcait.com",
     
+	alcaApiUrl: "https://api/",
+
 	invalidateToken: function() {
 		this.token = "";
-    },
-    
-    debugMode: true,
-    logAllErrors: true,
+	}
 };
+
+Object.defineProperty(configObject, "token", {
+	get: function() {
+		return applicationSettingsModule.getString("token");
+	},
+	set: function(token) {
+		return applicationSettingsModule.setString("token", token);
+	}
+});
+
+
+Object.defineProperty(configObject, "alcaToken", {
+	get: function() {
+		return applicationSettingsModule.getString("alcaToken");
+	},
+	set: function(alcaToken) {
+		return applicationSettingsModule.setString("alcaToken", clarifaiToken);
+	}
+});
+
+
+Object.defineProperty(configObject, "displayName", {
+	get: function() {
+		return applicationSettingsModule.getString("displayName");
+	},
+	set: function(displayName) {
+		return applicationSettingsModule.setString("displayName", displayName);
+	}
+});
+
+
+Object.defineProperty(configObject, "userId", {
+	get: function() {
+		return applicationSettingsModule.getString("userId");
+	},
+	set: function(userId) {
+		return applicationSettingsModule.setString("userId", userId);
+	}
+});
 
 
 module.exports = configObject;

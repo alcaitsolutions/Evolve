@@ -17,7 +17,11 @@
         </ActionItem>
         <Label class="action-bar-title" text="Signup"></Label>
     </ActionBar>
-   
+    <StackLayout verticalAlignment="middle">
+        <!-- >> activity-indicator-setting-busy -->
+        <ActivityIndicator busy="{{ isLoading }}" />
+        <!-- << activity-indicator-setting-busy -->
+    </StackLayout>
     <DockLayout width="100%" height="100%" backgroundColor="lightgray" class="page-gradient"
         stretchLastChild="false">
 
@@ -34,11 +38,14 @@
             <Image style="margin-top: 15"  src="~/images/signup/progress.png" stretch="fill" />
         </StackLayout>
         <StackLayout  verticalAlignment="center" horizontalAlignment="center" >
-            <TextField  id="fName" width="80%"  text="{{ textFieldValue }}" hint="Name" class="textFields"/>
-            <TextField id="email" text="{{ textFieldValue }}" hint="Email" class="textFields"/>
-            <TextField id="password1" text="{{ textFieldValue }}" hint="Password" class="textFields"/>
-            <TextField id="password2" text="{{ textFieldValue }}" hint="Confirm Password" class="textFields"/>
-        </StackLayout>
+            <TextField  id="fName" width="80%"  text="{{ fNameValue }}" hint="Name" class="textFields"/>
+            <TextField id="email" text="{{ emailValue }}" hint="Email" class="textFields"/>
+            <TextField id="password1" text="{{ pass1Value }}" hint="Password" class="textFields"/>
+          
+          <TextField id="password2" text="{{ pass2Value }}" hint="Confirm Password" class="textFields"/>
+  
+
+  </StackLayout>
         <!-- end content -->
     </DockLayout>
 </Page>

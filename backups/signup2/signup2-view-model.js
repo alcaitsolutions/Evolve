@@ -7,7 +7,7 @@ function Signup2ViewModel() {
 
     const viewModel = observableModule.fromObject({
         /* Add your view model properties here */
-        lastProgram: config.lastProgram,
+        busy: false,
     });
 
     return viewModel;

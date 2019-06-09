@@ -21,8 +21,12 @@
         <Label class="action-bar-title" text="Settings"></Label>
     </ActionBar>
 
-    <GridLayout class="page-content">
-        <Label class="page-icon fa" text="&#xf013;"></Label>
-        <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
-    </GridLayout>
+    <GridLayout columns="2*, auto, auto" rows="auto, auto, auto" width="100%" height="100%" backgroundColor="lightgray" >
+    <Label text="Notifications" row="0" col="0"/>
+    <Label text="Push" row="0" col="1" />
+    <Label text="Email" row="0" col="2" />
+<Label text="Messages" row="1" col="0"/>
+<Switch checked="true" (checkedChange)="onCheckedChange($event)" class="m-15" row="1" col="1"></Switch>
+ <Switch checked="true" (checkedChange)="onCheckedChange($event)" class="m-15" row="1" col="2"></Switch>
+  </GridLayout>
 </Page>
