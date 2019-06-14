@@ -18,15 +18,16 @@ const { fromObject } = require("tns-core-modules/data/observable");
 var frameModule = require("tns-core-modules/ui/frame");
 const application = require("tns-core-modules/application");
 
-// Feedback
-const FeedbackService = require("~/shared/services/feedback-service");
+// Feedback Testing
+const Color = require("tns-core-modules/color");
+const Feedback = require("nativescript-feedback").Feedback;
+const FeedbackType = require("nativescript-feedback").FeedbackType;
+const FeedbackPosition = require("nativescript-feedback").FeedbackPosition;
 const isIOS = require("tns-core-modules/platform");
 
 // Import Fancy Alert
 const FancyAlertService = require("~/shared/services/fancy-alert-service");
 
-// Local Notifications
-const NotificationService = require("~/shared/services/notification-service");
 // +---------------------------------------------------------------------------+
 // | 2. CREATE VIEW MODEL                                                      |                                                                        |
 // +---------------------------------------------------------------------------+
@@ -35,9 +36,9 @@ const model = {
     /* Properties */
     username: "john",
     password: "12345",
-    //feedback: new Feedback(),
-    //feedbackPosition: FeedbackPosition,
-    //feedbackType: FeedbackType,
+    feedback: new Feedback(),
+    feedbackPosition: FeedbackPosition,
+    feedbackType: FeedbackType,
 
     /* Methods */
     onNavTap: function (args) {
@@ -70,14 +71,9 @@ const model = {
         //this.showSuccess();
         //this.showError();
         //this.showWarning();
-        //FancyAlertService.showFancyError('OOps','Something went wrong','Close');
-        //FeedbackService.showSuccess();
-        FeedbackService.showInfo();
-        //NotificationService.doScheduleWithButtons();
-        //NotificationService.doScheduleId4GroupedWithCustomIcon();
-        //NotificationService.doScheduleId5WithInput();
-        FeedbackService.doCancelAll();
-        FeedbackService.doScheduleAndSetBadgeNumber();
+        FancyAlertService.showFancyError('OOps','Something went wrong','Close');
+
+        
     },
 
     showSuccess: function () {

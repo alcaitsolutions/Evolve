@@ -6,6 +6,8 @@ const topmost = require("tns-core-modules/ui/frame").topmost;
 
 const signupViewModel = new SignupViewModel;
 
+// Import Fancy Alert
+const FancyAlertService = require("~/shared/services/fancy-alert-service");
 
 var pageArgs;
 
@@ -28,9 +30,9 @@ function onSignupButtonTap(args){
     // Go to page 2 signup 
     //frameModule.topmost().navigate("./signup2/signup2-page");
      //frameModule.topmost().navigate("./signup/signup-page");
+     FancyAlertService.showFancySuccess("Welcome!","Your account has been created. A confirmation email has been sent. Enjoy Health Conscious.","Ok");
 
-
-
+/*
      args.object.page.frame.navigate({
         moduleName: "./signup2/signup2-page",
         animated: true,
@@ -40,6 +42,7 @@ function onSignupButtonTap(args){
           curve: "easeIn"
         }
       });
+      */
 
 }
 

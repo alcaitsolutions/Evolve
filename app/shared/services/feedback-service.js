@@ -1,12 +1,15 @@
+      // More methods in demo folders, main-view-model.ts
+      
       const Feedback = require("nativescript-feedback").Feedback;
       const FeedbackType = require("nativescript-feedback").FeedbackType;
       const FeedbackPosition = require("nativescript-feedback").FeedbackPosition;
+      const Color = require("tns-core-modules/color");
 
       function showSuccess() {
-
           feedback = new Feedback();
           feedbackPosition = FeedbackPosition;
           feedbackType = FeedbackType;
+          color = Color;
 
           feedback.show({
               title: "Thumbs up!",
@@ -24,4 +27,33 @@
           });
       }
 
+      function showInfo(){
+        feedback = new Feedback();
+        feedbackPosition = FeedbackPosition;
+        feedbackType = FeedbackType;
+        color = Color;
+        feedback.show({
+            title: "Some info for you",
+            message: "This is the default Info style.",
+            duration: 2000,
+            type: feedbackType.Info,
+            onTap: () => {
+              console.log("showInfo tapped");
+            },
+            onShow: (animating) => {
+              if (animating) {
+                console.log('showInfo animating');
+              } else {
+                console.log("showInfo shown");
+              }
+            },
+            onHide: () => {
+              console.log("showInfo hidden");
+            },
+          });
+
+
+      }
+
       exports.showSuccess = showSuccess;
+      exports.showInfo = showInfo;
