@@ -1,6 +1,6 @@
 <Page
     class="page"
-    navigatingTo="onNavigatingTo"  
+    
     xmlns="http://schemas.nativescript.org/tns.xsd" 
     xmlns:bottomnav="nativescript-bottomnavigation" 
     xmlns:VideoPlayer="../nativescript-videoplayer"

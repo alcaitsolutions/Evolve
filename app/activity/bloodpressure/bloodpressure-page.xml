@@ -1,0 +1,43 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:chart="nativescript-ui-chart">
+
+    <Label text="BLOOD PRESSURE CHART TESTING"></Label>
+    <StackLayout>
+        <StackLayout horizontalAlignment="center" orientation="horizontal">
+        <Label  style = "font-size: 16; font-family: Roboto;" text="Graph" class="m-t-20 m-r-15" ></Label>
+          <Label style = "font-size: 16; font-family: Roboto;" text="List" class="m-t-20"></Label>
+        </StackLayout>
+        <chart:RadCartesianChart class="m-t-10 m-l-30 m-r-30" height="250">
+            <chart:RadCartesianChart.series>
+                <chart:LineSeries items="{{ animeData, animeData2 }}" categoryProperty="season"
+                    valueProperty="count">
+                    <chart:LineSeries.horizontalAxis>
+                        <chart:CategoricalAxis labelFitMode="Rotate" />
+                    </chart:LineSeries.horizontalAxis>
+                    <chart:LineSeries.verticalAxis>
+                        <chart:LinearAxis labelLayoutMode="Outer" />
+                    </chart:LineSeries.verticalAxis>
+                </chart:LineSeries>
+                
+            </chart:RadCartesianChart.series>
+        </chart:RadCartesianChart>
+
+        <GridLayout rows="*, *,*" columns="*, *">
+            <Label text="Systolic" row="0" col="0" colSpan="2"/>
+            <Label text="% change / last reading:" row="1" col="0" />
+            <TextField text="%" row="1" col="1"/>
+            <Label text="% change / beginning:" row="1" col="0" />
+            <TextField text="%" row="1" col="1"/>
+
+
+            <Label text="Dastolic" row="2" col="0" colSpan="2"/>
+            <Label text="% change / last reading:" row="2" col="0" />
+            <TextField text="%" row="2" col="1"/>
+            
+            <Label text="% change / beginning" row="2" col="0" />
+           <TextField text="%" row="2" col="1"/>
+
+       
+        </GridLayout>
+    </StackLayout>
+</Page>

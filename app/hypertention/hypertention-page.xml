@@ -1,0 +1,51 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:bottomnav="nativescript-bottomnavigation"
+    >
+    <ActionBar class="action-bar customActionBar" >
+  
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+   
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left"></ActionItem>
+        <Label class="action-bar-title" text="Hypertention"></Label>
+    </ActionBar>
+    <ScrollView>
+      
+        <GridLayout>
+           <WrapLayout style="margin: 5;">
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+             <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+         
+           <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+         
+           <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+         
+           <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+                <Image width="75" height="75" src="~/images/program-6c/week1-icon-on.png" class="programIcon"/>
+
+           </WrapLayout>
+
+
+              
+        </GridLayout>
+    </ScrollView>
+</Page>

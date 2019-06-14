@@ -1,0 +1,44 @@
+<Page loaded="pageLoaded" class="page"
+    xmlns="http://www.nativescript.org/tns.xsd">
+    <ActionBar class="action-bar customActionBar" >
+        <!-- 
+        Use the NavigationButton as a side-drawer button in Android
+        because ActionItems are shown on the right side of the ActionBar
+        -->
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <!-- 
+        Use the ActionItem for IOS with position set to left. Using the
+        NavigationButton as a side-drawer button in iOS is not possible,
+        because its function is to always navigate back in the application.
+        -->
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left"></ActionItem>
+        <Label class="action-bar-title" text="Messages"></Label>
+    </ActionBar>
+    <ScrollView>
+        <Label horizontalAlignment="center" text="Messages"></Label>
+        <StackLayout class="home-panel">
+            <Label class="msgHeader" horizontalAlignment="center" text="Messages"></Label>
+            <SearchBar hint="Search by keyword" text="{{ searchPhrase }}"
+                submit="{{ onSearchSubmit }}" />
+            <Label width="30" height="30" class="plusButton"
+                horizontalAlignment="right" text=" + " tap="{{ onNewMessage }}"></Label>
+            <FlexboxLayout style="margin-top: 15">
+                <Label textWrap="true" class="leftCol" text="Evolve Team"
+                    backgroundColor="aquamarine" height="100" width="30%"></Label>
+                <Label text=" " />
+                <Label class="rightCol" textWrap="true" text="Great Job on Week 3! The one thing that we recommend is revisit identification of triggers."
+                    backgroundColor="aquamarine" height="auto" width="60%"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout style="margin-top: 15">
+                <Label textWrap="true" class="leftCol" text="Evolve Team"
+                    backgroundColor="aquamarine" height="100" width="30%"></Label>
+                <Label text=" " />
+                <Label class="rightCol msg-container" textWrap="true" text="Great Job on Week 3! The one thing that we recommend is revisit identification of triggers."
+                    backgroundColor="aquamarine" height="auto" width="60%"></Label>
+            </FlexboxLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>

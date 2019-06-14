@@ -1,35 +1,33 @@
-<Page
-    navigatingTo="onNavigatingTo"  
-    xmlns="http://schemas.nativescript.org/tns.xsd" 
- >
+<Page loaded="pageLoaded" class="page page-gradient" xmlns="http://www.nativescript.org/tns.xsd">
 
-
-    <ActionBar class="action-bar customActionBar">
-        <!-- 
-        Use the NavigationButton as a side-drawer button in Android
-        because ActionItems are shown on the right side of the ActionBar
-        -->
-        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
-        <!-- 
-        Use the ActionItem for IOS with position set to left. Using the
-        NavigationButton as a side-drawer button in iOS is not possible,
-        because its function is to always navigate back in the application.
-        -->
-        <ActionItem icon="res://navigation/menu" 
-            android:visibility="collapsed" 
-            tap="onDrawerButtonTap"
-            ios.position="left">
-        </ActionItem>
-        <Label class="action-bar-title" text="Activity Monitor"></Label>
+    <ActionBar title="Home" class="action-bar">
     </ActionBar>
+    <ScrollView>
+        <StackLayout class="home-panel">
+            <!--Add your page content here-->
+            <Label textWrap="true" text="Health Conscious" class="h2 description-label" />
+            <Label textWrap="true" text="Please compare this gradient background to the prototype 'Activity Monitor' in Figma:"
+                class="h2 description-label" />
+            <Label textWrap="true" text="The screen is labled: 5. Activity Monitor (final) in Figma. This is as close as we will get."
+                class="h2 description-label" />
+        </StackLayout>
+    </ScrollView>
+    <DockLayout class="page-gradient" height=" 100%">
+        <!-- bottom navigation buttons -->
+        <StackLayout dock="bottom" height="90" class="bottom-navigation"
+            orientation="horizontal">
+            <Button class="activity-button btnFont" text="Activity" />
+            <Button class="activity-button btnFont" text="Program" />
+            <Button class="activity-button btnFont" text="Messages" />
+            <Button class="activity-button btnFont" text="Community" />
+            <Button class="activity-button btnFont" text="Journal" />
+            <Button text="Programs" />
 
-    <GridLayout class="page-content">
-        <Label class="page-icon fa" text="&#xf002;"></Label>
-        <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
-    </GridLayout>
-
-    
-
-
-
+            <Button text="Messages" />
+            <Button text="Community" />
+            <Button text="Journal" />
+        </StackLayout>
+        <!-- other top content -->
+        <Button dock="top" text="Other Content" style="width:50%;height:150" />
+    </DockLayout>
 </Page>

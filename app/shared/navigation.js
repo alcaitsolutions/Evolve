@@ -11,48 +11,43 @@ module.exports = {
 
     // SideDrawer ( ACCOUNT )
     goToAccountPage: function () {
-        f,rameModule.topmost().navigate("./account/account");
-    },
-
-    // SideDrawer ( SETTINGS )
-    goToAccountPage: function () {
         frameModule.topmost().navigate("./account/account");
     },
 
     // SideDrawer ( ACTIVITY MONITOR )
-    goToLoginPage: function () {
-        frameModule.topmost().navigate("./account/account");
+    goToActivityPage: function () {
+        frameModule.topmost().navigate("./activity/activity");
     },
 
     // SideDrawer ( PROGRAMS )
-    goToLoginPage: function () {
+    goToProgramPage: function () {
         frameModule.topmost().navigate("./program/program");
     },
 
     // SideDrawer ( MESSAGES )
-    goToLoginPage: function () {
-        frameModule.topmost().navigate("./message/message");
+    goToMessagesPage: function () {
+        frameModule.topmost().navigate("./messages/messages");
     },
 
     // SideDrawer ( SETTINGS )
-    goToLoginPage: function () {
+    goToSettingsPage: function () {
         frameModule.topmost().navigate("./settings/settings");
     },
     // SideDrawer ( JOURNAL )
-    goToLoginPage: function () {
+    goToJournalPage: function () {
         frameModule.topmost().navigate("./journal/journal");
     },
     // SideDrawer ( FAVORITES )
-    goToLoginPage: function () {
+    goToFavoritesPage: function () {
         frameModule.topmost().navigate("./favorites/favorites");
     },
     // SideDrawer ( SUPPORT )
-    goToLoginPage: function () {
+    goToSupportPage: function () {
         frameModule.topmost().navigate("./support/support");
     },
     // SideDrawer ( DEVELOPER )
-    goToLoginPage: function () {
-        frameModule.topmost().navigate("./test/test");
+    goToDeveloperPage: function () {
+        frameModule.topmost().navigate("./developer/developer");
     },
 
     goToSignoutPage: function () {

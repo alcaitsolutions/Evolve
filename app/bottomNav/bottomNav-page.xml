@@ -1,0 +1,55 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+
+  <ActionBar class="action-bar customActionBar" >
+     
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+  
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left"></ActionItem>
+        <Label class="action-bar-title" text="Developer Options"></Label>
+    </ActionBar>
+    <GridLayout rows="*,80" class="{{ (hasGradient ? 'page-gradient' : ''}}">
+        <ScrollView row="0">
+        <Label horizontalAlignment="center" text="Messages"></Label>
+        <StackLayout class="home-panel">
+            <Label class="msgHeader" horizontalAlignment="center" text="Messages"></Label>
+            <SearchBar hint="Search by keyword" text="{{ searchPhrase }}"
+                submit="{{ onSearchSubmit }}" />
+                <Image height="50" width="50" src="~/images/bottom-nav-icons/add.png"  class="addButton" tap="{{ onAddTap }}" horizontalAlignment="right" />
+           
+            <FlexboxLayout style="margin-top: 15">
+                <Label textWrap="true" class="leftCol" text="Evolve Team"
+                    backgroundColor="aquamarine" height="100" width="30%"></Label>
+                <Label text=" " />
+                <Label class="rightCol" textWrap="true" text="Great Job on Week 3! The one thing that we recommend is revisit identification of triggers."
+                    backgroundColor="aquamarine" height="auto" width="60%"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout style="margin-top: 15">
+                <Label textWrap="true" class="leftCol" text="Evolve Team"
+                    backgroundColor="aquamarine" height="100" width="30%"></Label>
+                <Label text=" " />
+                <Label class="rightCol msg-container" textWrap="true" text="Great Job on Week 3! The one thing that we recommend is revisit identification of triggers."
+                    backgroundColor="aquamarine" height="auto" width="60%"></Label>
+            </FlexboxLayout>
+        </StackLayout>
+        
+    </ScrollView>
+        <StackLayout row="1" orientation="horizontal" class="bottomNavBackground">
+           <Image id="btn-activity" width="20%" src="~/images/bottom-nav-icons/activity.png" stretch="aspectFit" tap="{{ onNavTap }}"/>
+
+           <Image width="20%" src="~/images/bottom-nav-icons/program.png" stretch="aspectFit" tap="{{ onNavTap }}"/>
+
+           <Image width="20%" src="~/images/bottom-nav-icons/message.png" stretch="aspectFit" tap="{{ onNavTap }}"/>
+
+           <Image width="20%" src="~/images/bottom-nav-icons/community.png" stretch="aspectFit" tap="{{ onNavTap }}"/>
+
+           <Image width="20%" src="~/images/bottom-nav-icons/journal.png" stretch="aspectFit" tap="{{ onNavTap }}"/>
+
+            
+        </StackLayout>
+
+        
+    </GridLayout>
+</Page>

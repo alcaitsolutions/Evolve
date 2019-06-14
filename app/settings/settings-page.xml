@@ -1,7 +1,6 @@
 <Page
-    navigatingTo="onNavigatingTo"  
+    navigatingTo="onNavigatingTo"
     xmlns="http://schemas.nativescript.org/tns.xsd">
-
     <ActionBar class="action-bar customActionBar">
         <!-- 
         Use the NavigationButton as a side-drawer button in Android
@@ -16,17 +15,46 @@
         <ActionItem icon="res://navigation/menu" 
             android:visibility="collapsed" 
             tap="onDrawerButtonTap"
-            ios.position="left">
-        </ActionItem>
+            ios.position="left"></ActionItem>
         <Label class="action-bar-title" text="Settings"></Label>
     </ActionBar>
+    <GridLayout class="settingsPage" columns="4*, *, *" rows="50, 35, 35, 35, 35, 35, 35, 35, 35" width="100%" height="100%" backgroundColor="white" >
+        <Label class="settingsHeader" text="Notifications" row="0" col="0"/>
+        <Label class="settingsHeader" text="Push" row="0" col="1" />
+        <Label class="settingsHeader" text="Email" row="0" col="2" />
 
-    <GridLayout columns="2*, auto, auto" rows="75, auto, auto" width="100%" height="100%" backgroundColor="lightgray" >
-    <Label text="Notifications" row="0" col="0"/>
-    <Label text="Push" row="0" col="1" />
-    <Label text="Email" row="0" col="2" />
-<Label text="Messages" row="1" col="0"/>
-<Switch checked="true" (checkedChange)="onCheckedChange($event)" class="m-15" row="1" col="1"></Switch>
- <Switch checked="true" (checkedChange)="onCheckedChange($event)" class="m-15" row="1" col="2"></Switch>
-  </GridLayout>
+        <!-- Begin Notifications -->
+        <Label class="settingType" text="Messages" row="1" col="0"/>
+        <Switch checked="false" row="1" col="1"/>
+        <Switch checked="false" row="1" col="2"/>
+
+        <Label class="settingType" text="Program Alerts" row="2" col="0"/>
+        <Switch checked="false" row="2" col="1"/>
+        <Switch checked="false" row="2" col="2"/>
+
+        <Label class="settingType" text="Reminders" row="3" col="0"/>
+        <Switch checked="false" row="3" col="1"/>
+        <Switch checked="false" row="3" col="2"/>
+
+        <Label class="settingType" text="Comments" row="4" col="0"/>
+        <Switch checked="false" row="4" col="1"/>
+        <Switch checked="false" row="4" col="2"/>
+
+                <Label class="settingType" text="General" row="5" col="0"/>
+        <Switch checked="false" row="5" col="1"/>
+        <Switch checked="false" row="5" col="2"/>
+
+                 <Label class="settingType" text="Profile Visible" row="6" col="0"/>
+        <Switch checked="false" row="6" col="1"/>
+        <Switch checked="false" row="6" col="2"/>
+
+                       <Label class="settingType" text="Real Name Visible" row="7" col="0"/>
+        <Switch checked="false" row="7" col="1"/>
+        <Switch checked="false" row="7" col="2"/>
+
+                       <Label class="settingType" text="Allow Members To Message" row="8" col="0"/>
+        <Switch checked="false" row="8" col="1"/>
+        <Switch checked="false" row="8" col="2"/>
+</GridLayout> 
+
 </Page>

@@ -1,0 +1,33 @@
+<Page
+    class="page"
+    
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:bottomnav="nativescript-bottomnavigation"
+    >
+    <ActionBar class="action-bar customActionBar" >
+  
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+   
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left"></ActionItem>
+        <Label class="action-bar-title" text="Support Center"></Label>
+    </ActionBar>
+    <ScrollView>
+        <StackLayout class="">
+
+
+            
+            <SearchBar hint="Search Support" text="{{ searchPhrase }}" submit="{{ onSearchSubmit }}" />
+
+        
+            <WebView   id="myWebView" src="~/supportCenter/support-callouts.html" />
+
+
+
+
+
+        </StackLayout>
+    </ScrollView>
+</Page>

@@ -5,6 +5,8 @@ var dialogs = require("tns-core-modules/ui/dialogs");
 const topmost = require("tns-core-modules/ui/frame").topmost;
 
 const signupViewModel = new SignupViewModel;
+
+
 var pageArgs;
 
 /* ***********************************************************
@@ -26,6 +28,9 @@ function onSignupButtonTap(args){
     // Go to page 2 signup 
     //frameModule.topmost().navigate("./signup2/signup2-page");
      //frameModule.topmost().navigate("./signup/signup-page");
+
+
+
      args.object.page.frame.navigate({
         moduleName: "./signup2/signup2-page",
         animated: true,
