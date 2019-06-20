@@ -76,8 +76,8 @@ const model = {
         //NotificationService.doScheduleWithButtons();
         //NotificationService.doScheduleId4GroupedWithCustomIcon();
         //NotificationService.doScheduleId5WithInput();
-        FeedbackService.doCancelAll();
-        FeedbackService.doScheduleAndSetBadgeNumber();
+        //NotificationService.doCancelAll();
+        NotificationService.doScheduleEveryMinute();
     },
 
     showSuccess: function () {

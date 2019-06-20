@@ -2,18 +2,18 @@
 <ScrollView>
  <StackLayout verticalAlignment="center" class="form">
 	<StackLayout  class="input-field ">
-				<TextField class="form-control" text="{{ email }}" hint="Email" keyboardType="email" autocorrect="false" autocapitalizationType="none"
+				<TextField class="form-control" text="{{ email }}"  keyboardType="email" autocorrect="false" autocapitalizationType="none"
 				 returnKeyType="next" hint="Email Address"/>
 				<Label class="" />
 			</StackLayout>
 
 			<StackLayout class="">
-				<TextField hint="Password" id="password" class="form-control" text="{{ password }}" hint="Password" secure="true" returnKeyType="{{ isLoggingIn ? 'done' : 'next' }}"
+				<TextField hint="Password" id="password" class="form-control" text="{{ password }}" secure="true" returnKeyType="{{ isLoggingIn ? 'done' : 'next' }}"
 				/>
 				<Label horizontalAlignment="right" text="Forgot Password?" tap="onForgotPassword"></Label>
 			
-				<Button text="Log In" tap="submit" class=" btn-primary m-t-10" tap="onSubmit"/>
-				<Label text="Signup here, Get Started!" tap="onGetStarted"></Label>
+				<Button text="Log In"  class=" btn-primary m-t-10" tap="onSubmit"/>
+				<Label text="Signup here, Get Started!!" tap="onGetStarted"></Label>
 				
 			</StackLayout>
  </StackLayout>

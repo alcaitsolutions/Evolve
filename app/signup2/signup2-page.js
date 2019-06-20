@@ -1,51 +1,99 @@
+// example-page.js
+// +---------------------------------------------------------------------------+
+// | ALCA IT SOLUTIONS - Preferred Blank NativeScript Templates                |
+// +---------------------------------------------------------------------------+                                                                       |                              |
+// | VIEW MODEL Variables                                                      |
+// | To access properties within view-model from XML screen:                   |
+// |    -- use double curly brackets {{ }}                                     |
+// |       example:  <Label text="{{ username }}" />                           |
+// |                 <Button text="tap me" tap="{{ myTapMethod }}"/>           |
+// | To access functions OUTSIDE of view model from XML screen:                |
+// |    -- omit double curly brackets                                          |
+// |       example:  <Button text="tap me" tap="myGenericFunction" />          |                                 |                                                                             
+// +---------------------------------------------------------------------------+
+// | 1. IMPORT REQUIRED FILES                                                  |                                                                        |
+// +---------------------------------------------------------------------------+
+const { app } = require("tns-core-modules/application");
+const { fromObject } = require("tns-core-modules/data/observable");
+var frameModule = require("tns-core-modules/ui/frame");
+const application = require("tns-core-modules/application");
 
-const app = require("tns-core-modules/application");
-const frameModule = require("tns-core-modules/ui/frame");
-var dialogs = require("tns-core-modules/ui/dialogs");
-const topmost = require("tns-core-modules/ui/frame").topmost;
-var gesturesModule = require("tns-core-modules/ui/gestures");
-const view = require("tns-core-modules/ui/core/view");
-const ActivityIndicator = require("tns-core-modules/ui/activity-indicator").ActivityIndicator;
-var FeedbackPlugin = require("nativescript-feedback");
-var feedback = new FeedbackPlugin.Feedback();
+// Feedback
+const FeedbackService = require("~/shared/services/feedback-service");
+const isIOS = require("tns-core-modules/platform");
 
+// Import Fancy Alert
+const FancyAlertService = require("~/shared/services/fancy-alert-service");
 
-function onNavigatingTo(args) {
-    const page = args.object;
-    pageArgs = page;
-    page.bindingContext = signup2ViewModel;
+// Local Notifications
+const NotificationService = require("~/shared/services/notification-service");
+
+// Checkbox
+
+// +---------------------------------------------------------------------------+
+// | 2. CREATE VIEW MODEL                                                      |                                                                        |
+// +---------------------------------------------------------------------------+
+const model = {
+
+    /* Properties */
+    currentPlan: "",
+    nextButtonOn: false,
+
+    /* Methods */
+    onNavTap: function (args) {
+        const navBtn = args.object;
+        const page = navBtn.page;
+        const btnId = navBtn.id;
+    },
+
+    onSignupButtonTap: function(args){
+        if(this.currentPlan == ""){
+            FancyAlertService.showFancyError("No Plan Selected","Please tap on the plan you'd like","Ok");
+        } else {
+            args.object.page.frame.navigate({
+                moduleName: "./signup3/signup3-page",
+                animated: true,
+                transition: {
+                  name: "slideLeft",
+                  duration: 380,
+                  curve: "easeIn"
+                }
+              });
+        }
+
+    
+
+        
+    },
+
+    onPlanFreeTap: function(args){
+        const planImage = args.object;
+        this.set("nextButtonOn",true);
+
+        if(this.currentPlan == "free"){
+            // Turn it off
+            planImage.src = "~/images/signup/plan-free-off.png";
+            this.set("currentPlan","");
+        } else {
+            planImage.src = "~/images/signup/plan-free-on.png";
+            this.set("currentPlan","free");
+            FancyAlertService.showFancySuccess("Plan Secected!","You have chosen the FREE plan.","Ok");
+        }
+
+    
+    }
 
 }
 
-exports.loaded = function (args) {
-    console.log("loaded");
-};
+/* Set the binding context */
+const bindingContext = fromObject(model);
 
-function onDiabetesTap(args) {
-    console.log("here");
-    feedback.success({
-        title: "Successfully shown myself!",
-        message: "I'm configured to hide after 2.5 seconds.",
-        duration: 2500,
-        // type: FeedbackType.Success, // no need to specify when using 'success' instead of 'show'
-        onTap: () => {
-          console.log("showSuccess tapped");
-        }
-      });
-
-    /*
-    args.object.page.frame.navigate({
-        moduleName: "./signup3/signup3-page",
-        animated: true,
-        transition: {
-            name: "slideLeft",
-            duration: 380,
-            curve: "easeIn"
-        }
-    });
-    */
-  
-
+// +---------------------------------------------------------------------------+
+// | 3. OTHER FUNCTIONS ( Not bound to ViewModel )                             |                                                                        |
+// +---------------------------------------------------------------------------+
+function pageLoaded(args) {
+    var page = args.object;
+    page.bindingContext = bindingContext;
 }
 
 function onDrawerButtonTap(args) {
@@ -53,11 +101,17 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
-function onSignupButtonTap(args) {
-    signup2ViewModel.set("authenticating", true);
+function showToast(msg) {
+    android.widget.Toast.makeText(application.android.context, msg, android.widget.Toast.LENGTH_SHORT).show();
 }
 
-exports.onDiabetesTap = onDiabetesTap;
-exports.onNavigatingTo = onNavigatingTo;
-exports.onSignupButtonTap = onSignupButtonTap;
+
+
+// +---------------------------------------------------------------------------+
+// | 4. EXPORT OTHER FUNCTIONS                                                 |                                                                        |
+// +---------------------------------------------------------------------------+
+exports.pageLoaded = pageLoaded;
 exports.onDrawerButtonTap = onDrawerButtonTap;
+exports.showToast = showToast;
+
+

@@ -1,7 +1,7 @@
 const Observable = require("tns-core-modules/data/observable");
 const alert = require("tns-core-modules/ui/dialogs").alert;
 const LocalNotifications = require("nativescript-local-notifications").LocalNotifications;
-const Color = require("tns-core-modules/color");
+const {Color} = require("tns-core-modules/color");
 
 var notification;
 
@@ -97,7 +97,7 @@ function doScheduleNoSound() {
 }
 
 function doScheduleAndSetBadgeNumber() {
-    LocalNotifications.schedule(
+    LocalNotifications.schedule (
             [{
                 id: 3,
                 title: 'Hi',

@@ -23,7 +23,7 @@
             ios.position="left">
         </ActionItem>
         <Label class="action-bar-title" text="Programs"></Label>
-    </ActionBar>
+    </ActionBar
 
     <ScrollView>
         <StackLayout class="home-panel ">
