@@ -1,0 +1,181 @@
+[{
+  "id": 1,
+  "firstName": "Lutero",
+  "lastName": "McCague",
+  "email": "lmccague0@example.com",
+  "username": "lmccague0",
+  "password": "Xb1T7jebGpg",
+  "ip_address": "90.20.1.144",
+  "userType": "Client"
+}, {
+  "id": 2,
+  "firstName": "Barclay",
+  "lastName": "Aronsohn",
+  "email": "baronsohn1@elegantthemes.com",
+  "username": "baronsohn1",
+  "password": "dL73Va",
+  "ip_address": "87.232.200.57",
+  "userType": "Client"
+}, {
+  "id": 3,
+  "firstName": "Brent",
+  "lastName": "Jahndel",
+  "email": "bjahndel2@imdb.com",
+  "username": "bjahndel2",
+  "password": "OOGMuYp5y",
+  "ip_address": "4.156.184.120",
+  "userType": "Employee"
+}, {
+  "id": 4,
+  "firstName": "Kara-lynn",
+  "lastName": "Seage",
+  "email": "kseage3@hc360.com",
+  "username": "kseage3",
+  "password": "Yll9lHBTqKoQ",
+  "ip_address": "154.68.20.2",
+  "userType": "Admin"
+}, {
+  "id": 5,
+  "firstName": "Denna",
+  "lastName": "Bearward",
+  "email": "dbearward4@rambler.ru",
+  "username": "dbearward4",
+  "password": "ykvGRsxngQl",
+  "ip_address": "158.74.48.60",
+  "userType": "Client"
+}, {
+  "id": 6,
+  "firstName": "Lewiss",
+  "lastName": "Starkey",
+  "email": "lstarkey5@tripadvisor.com",
+  "username": "lstarkey5",
+  "password": "5nUDkIsen",
+  "ip_address": "248.218.61.58",
+  "userType": "Client"
+}, {
+  "id": 7,
+  "firstName": "Jarrid",
+  "lastName": "Bushaway",
+  "email": "jbushaway6@fc2.com",
+  "username": "jbushaway6",
+  "password": "wkskh94X",
+  "ip_address": "103.217.44.177",
+  "userType": "Employee"
+}, {
+  "id": 8,
+  "firstName": "Jocelyne",
+  "lastName": "Chaman",
+  "email": "jchaman7@opensource.org",
+  "username": "jchaman7",
+  "password": "ohDljNZWCQIj",
+  "ip_address": "184.110.141.82",
+  "userType": "Admin"
+}, {
+  "id": 9,
+  "firstName": "Corey",
+  "lastName": "Louiset",
+  "email": "clouiset8@nba.com",
+  "username": "clouiset8",
+  "password": "kXGb7mBX32T",
+  "ip_address": "77.21.247.123",
+  "userType": "Client"
+}, {
+  "id": 10,
+  "firstName": "Cherri",
+  "lastName": "Wrightham",
+  "email": "cwrightham9@accuweather.com",
+  "username": "cwrightham9",
+  "password": "qpsi0I",
+  "ip_address": "95.148.204.156",
+  "userType": "Admin"
+}, {
+  "id": 11,
+  "firstName": "Barnard",
+  "lastName": "Treadgold",
+  "email": "btreadgolda@artisteer.com",
+  "username": "btreadgolda",
+  "password": "llrYah",
+  "ip_address": "201.211.54.160",
+  "userType": "Employee"
+}, {
+  "id": 12,
+  "firstName": "Raymund",
+  "lastName": "Gavaran",
+  "email": "rgavaranb@chicagotribune.com",
+  "username": "rgavaranb",
+  "password": "3ioOo6NrtgM",
+  "ip_address": "54.158.222.128",
+  "userType": "Client"
+}, {
+  "id": 13,
+  "firstName": "Daphene",
+  "lastName": "Philliskirk",
+  "email": "dphilliskirkc@behance.net",
+  "username": "dphilliskirkc",
+  "password": "iS9720q",
+  "ip_address": "120.104.6.251",
+  "userType": "Employee"
+}, {
+  "id": 14,
+  "firstName": "Jsandye",
+  "lastName": "Van der Veldt",
+  "email": "jvanderveldtd@sogou.com",
+  "username": "jvanderveldtd",
+  "password": "3JA9WfpajZ",
+  "ip_address": "5.248.96.186",
+  "userType": "Client"
+}, {
+  "id": 15,
+  "firstName": "Ealasaid",
+  "lastName": "Luttger",
+  "email": "eluttgere@admin.ch",
+  "username": "eluttgere",
+  "password": "KIxK3vfis",
+  "ip_address": "30.130.25.81",
+  "userType": "Admin"
+}, {
+  "id": 16,
+  "firstName": "Demeter",
+  "lastName": "Logsdail",
+  "email": "dlogsdailf@nifty.com",
+  "username": "dlogsdailf",
+  "password": "0p4VCqz81Cu",
+  "ip_address": "145.179.150.195",
+  "userType": "Employee"
+}, {
+  "id": 17,
+  "firstName": "Marietta",
+  "lastName": "Galea",
+  "email": "mgaleag@nature.com",
+  "username": "mgaleag",
+  "password": "pqslb2T0",
+  "ip_address": "227.219.54.23",
+  "userType": "Employee"
+}, {
+  "id": 18,
+  "firstName": "Thorndike",
+  "lastName": "Motion",
+  "email": "tmotionh@weebly.com",
+  "username": "tmotionh",
+  "password": "t6yplHlAG1",
+  "ip_address": "248.128.138.116",
+  "userType": "Admin"
+}, {
+  "id": 19,
+  "firstName": "Ernesta",
+  "lastName": "Pizer",
+  "email": "epizeri@etsy.com",
+  "username": "epizeri",
+  "password": "j6hhzUaONn",
+  "ip_address": "228.85.31.177",
+  "userType": "Client"
+}, {
+  "id": 20,
+  "firstName": "Trixi",
+  "lastName": "Windrus",
+  "email": "twindrusj@ovh.net",
+  "username": "twindrusj",
+  "password": "0chT3w",
+  "ip_address": "104.224.237.87",
+  "userType": "Client"
+}]
